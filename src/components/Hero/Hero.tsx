@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
+import coverPic from '../../../cover_pic.jpeg';
 import { FloatingHearts } from '../common/FloatingHearts';
 
 export function Hero() {
@@ -63,7 +64,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img
-            src="/cover_pic.jpeg"
+            src={coverPic}
             alt="Front cover photo"
             className="h-full w-full object-cover"
             loading="eager"

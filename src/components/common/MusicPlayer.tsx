@@ -9,7 +9,7 @@ export function MusicPlayer() {
   const [isExpanded, setIsExpanded] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const songSrc = '/Kadhal-Konjam.mp3';
+  const songSrc = `${import.meta.env.BASE_URL}Kadhal-Konjam.mp3`;
 
   useEffect(() => {
     const audio = audioRef.current;
