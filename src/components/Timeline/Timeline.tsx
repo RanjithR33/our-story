@@ -53,14 +53,16 @@ export function Timeline() {
                             loop
                             muted
                             playsInline
-                            className="h-48 w-full object-cover transition-transform duration-500 hover:scale-105 md:h-56"
+                            className={`w-full object-cover transition-transform duration-500 hover:scale-105 ${event.id === '10' || event.id === '9' ? 'h-64 md:h-80' : 'h-48 md:h-56'}`}
+                            style={{ objectPosition: event.id === '10' ? 'center 18%' : event.id === '8' || event.id === '9' ? 'center 25%' : 'center' }}
                           />
                         ) : (
                           <img
                             src={event.image}
                             alt={event.title}
-                            className="h-48 w-full object-cover transition-transform duration-500 hover:scale-105 md:h-56"
+                            className={`w-full object-cover transition-transform duration-500 hover:scale-105 ${event.id === '10' || event.id === '9' ? 'h-64 md:h-80' : 'h-48 md:h-56'}`}
                             loading="lazy"
+                            style={{ objectPosition: event.id === '10' ? 'center 18%' : event.id === '8' || event.id === '9' ? 'center 25%' : 'center' }}
                           />
                         )}
                       </div>

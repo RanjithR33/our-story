@@ -6,7 +6,9 @@ import agaraLakeVideo from '../../agara_lake.mp4';
 import churchStreetPortrait from '../../seol_.jpeg';
 import ringDateImage from '../../ring.jpeg';
 import newYearProposalImage from '../../newyear.jpeg';
-
+import ardbdayImage from '../../ardbday.jpeg';
+import templeImage from '../../temple.jpeg';
+import valentineImage from '../../valentine.jpeg';
 export const timelineData: TimelineEvent[] = [
   {
     id: '1',
@@ -58,10 +60,34 @@ export const timelineData: TimelineEvent[] = [
   },
   {
     id: '7',
+    date: 'December 20, 2025',
+    title: 'Our First Temple Visit',
+    description:
+      'On December 20, 2025, we visited Shiva Temple together for the first time. It was a peaceful, beautiful moment that felt calm, sacred, and full of quiet love.',
+    image: templeImage,
+  },
+  {
+    id: '8',
     date: 'New Year’s Eve, 2026',
     title: 'The Night We Chose Forever',
     description:
       'We celebrated New Year together, and on that unforgettable night I proposed to her. everything felt surreal. It was the moment we chose forever, hand in hand, heart to heart.',
     image: newYearProposalImage,
+  },
+  {
+    id: '9',
+    date: 'January 7, 2026',
+    title: 'Ardhra’s Birthday, Simple and Sweet',
+    description:
+      'On January 7, 2026, You were a little under sick, but we still celebrated your birthday in the simplest, cutest way possible. Even our small moments felt full of love, and I know there will be many more birthdays to share together.',
+    image: ardbdayImage,
+  },
+  {
+    id: '10',
+    date: 'February 14, 2026',
+    title: 'Valentine’s Day, Cute Gifts and a Beautiful Night',
+    description:
+      'On February 14, 2026, we celebrated Valentine’s Day by gifting each other cute little presents and going on a date to Beige. It was such a lovely night, and she looked absolutely stunning.',
+    image: valentineImage,
   },
 ];
