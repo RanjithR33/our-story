@@ -1,8 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
-import { ThemeProvider } from './components/common/ThemeProvider';
 import { LoadingScreen } from './components/common/LoadingScreen';
 import { ScrollProgress } from './components/common/ScrollProgress';
-import { ThemeToggle } from './components/common/ThemeToggle';
 
 const MusicPlayer = lazy(() =>
   import('./components/common/MusicPlayer').then((m) => ({ default: m.MusicPlayer }))
@@ -20,15 +18,14 @@ export default function App() {
   }, []);
 
   return (
-    <ThemeProvider>
+    <>
       <LoadingScreen isLoading={isLoading} />
       <ScrollProgress />
-      <ThemeToggle />
 
       <Suspense fallback={null}>
         <HomePage />
         <MusicPlayer />
       </Suspense>
-    </ThemeProvider>
+    </>
   );
 }

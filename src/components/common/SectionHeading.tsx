@@ -26,11 +26,11 @@ export function SectionHeading({
       viewport={{ once: true, margin: '-100px' }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="font-hero text-3xl md:text-5xl font-semibold text-text-primary dark:text-white">
+      <h2 className="font-hero text-3xl font-semibold text-black dark:text-white md:text-5xl">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 font-accent text-lg md:text-xl italic text-text-secondary max-w-2xl mx-auto">
+        <p className="mx-auto mt-4 max-w-2xl font-accent text-lg italic text-black dark:text-slate-100 md:text-xl">
           {subtitle}
         </p>
       )}

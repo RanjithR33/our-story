@@ -54,5 +54,3 @@ export interface StatisticItem {
   suffix?: string;
   prefix?: string;
 }
-
-export type Theme = 'light' | 'dark';

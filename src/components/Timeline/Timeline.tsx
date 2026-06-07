@@ -4,7 +4,10 @@ import { SectionHeading } from '../common/SectionHeading';
 
 export function Timeline() {
   return (
-    <section id="timeline" className="section-padding bg-bg-light dark:bg-bg-dark">
+    <section
+      id="timeline"
+      className="section-padding bg-gradient-to-b from-bg-light via-white to-bg-light dark:from-bg-dark dark:via-slate-950 dark:to-bg-dark"
+    >
       <div className="container-app">
         <SectionHeading
           title="Our Journey"
@@ -13,7 +16,7 @@ export function Timeline() {
 
         <div className="relative">
           <div
-            className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-primary via-accent to-secondary md:block"
+            className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-primary via-secondary to-accent md:block dark:shadow-[0_0_18px_rgba(103,232,249,0.15)]"
             aria-hidden="true"
           />
 
@@ -32,7 +35,7 @@ export function Timeline() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <div className={`md:w-1/2 ${isLeft ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <div className="glass-card overflow-hidden p-6 md:p-8">
+                    <div className="glass-card overflow-hidden p-6 md:p-8 transition-transform duration-300 hover:-translate-y-1 dark:border-cyan-400/10 dark:bg-slate-900/70">
                       <time className="font-accent text-sm font-semibold uppercase tracking-wider text-primary">
                         {event.date}
                       </time>
@@ -43,18 +46,29 @@ export function Timeline() {
                         {event.description}
                       </p>
                       <div className="mt-4 overflow-hidden rounded-2xl">
-                        <img
-                          src={event.image}
-                          alt={event.title}
-                          className="h-48 w-full object-cover transition-transform duration-500 hover:scale-105 md:h-56"
-                          loading="lazy"
-                        />
+                        {event.image.toString().endsWith('.mp4') ? (
+                          <video
+                            src={event.image}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="h-48 w-full object-cover transition-transform duration-500 hover:scale-105 md:h-56"
+                          />
+                        ) : (
+                          <img
+                            src={event.image}
+                            alt={event.title}
+                            className="h-48 w-full object-cover transition-transform duration-500 hover:scale-105 md:h-56"
+                            loading="lazy"
+                          />
+                        )}
                       </div>
                     </div>
                   </div>
 
                   <div
-                    className="absolute left-1/2 top-8 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-primary bg-white dark:bg-bg-dark md:block"
+                    className="absolute left-1/2 top-8 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-primary bg-white shadow-[0_0_0_4px_rgba(56,189,248,0.12)] dark:border-secondary dark:bg-slate-950 md:block"
                     aria-hidden="true"
                   />
 
